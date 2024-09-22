@@ -69,7 +69,8 @@ public final class Scanner {
 		switch (currentChar) {
 		
 		// comment
-		case '!': 
+		case '!':
+		case '#':
 			takeIt();
 			
 			// the comment ends when we reach an end-of-line (EOL) or end of file (EOT - for end-of-transmission)
@@ -80,6 +81,7 @@ public final class Scanner {
 			break;
 
 		// whitespace
+		case '$':
 		case ' ':
 		case '\n':
 		case '\r':
@@ -256,7 +258,7 @@ public final class Scanner {
 
 		currentlyScanningToken = false;
 		// skip any whitespace or comments
-		while (currentChar == '!' || currentChar == ' ' || currentChar == '\n' || currentChar == '\r'
+		while (currentChar == '!' || currentChar == '#' || currentChar == ' ' || currentChar == '\n' || currentChar == '\r'
 				|| currentChar == '\t')
 			scanSeparator();
 

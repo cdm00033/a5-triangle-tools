@@ -1,0 +1,20 @@
+let
+    var a : Integer;
+    var b : Integer;
+    var sum : Integer;
+    var product : Integer;
+in
+    begin
+        a := 1;
+        b := 2;
+        sum := a + b;
+        product := a * b;
+
+        put(a);
+        put(b);
+        put(sum);
+        put(product);
+
+        if a = b then
+		    put("S"); put("a"); put("m"); put("e"); put("!");
+    end
